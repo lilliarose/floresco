@@ -713,14 +713,11 @@ div.info-box {
   transform-origin: top center;
 }
 
-li.green-policy:hover + div.info-box-green-policy,
-li.educate-students:hover + div.info-box-educate-students,
-li.educate-staff:hover + div.info-box-educate-staff {
+li:hover + div.info-box{
   display: block;
   border: 1px solid #059652;
   padding-left: 10px;
 }
-
 
 @keyframes growDown {
     0% {
@@ -787,7 +784,7 @@ li.educate-staff:hover + div.info-box-educate-staff {
   }
 }
 
-/* progress circle */
+/* progress circle 
 .progress{
   width: 150px;
   height: 150px;
@@ -926,6 +923,11 @@ border-color: #059652;
   .progress{ margin-bottom: 20px; }
 }
 
+/* Progress Bar */
+
+.progress-bar {
+  background-color: var(--color-primary);
+}
 
 
 /*--------------------------------------------------------------
