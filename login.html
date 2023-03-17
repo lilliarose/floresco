@@ -29,6 +29,7 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+
   <!-- =======================================================
   * Template Name: UpConstruction - v1.3.0
   * Template URL: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/
@@ -53,14 +54,14 @@
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="resources.html">Resources</a></li>
           <li><a href="challenges.html">Challenges</a></li>
           <li><a href="blog.html">Blog</a></li>
-          <li><a href="achievement.html">Your School</a></li>
+          <li><a href="achievement.html">Your School</li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="login.html" >Login</a></li>
+          <li><a href="login.html">Login</a></li>
         </ul>
       </nav><!-- .navbar -->
 
@@ -74,30 +75,37 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-6 text-center">
-            <h2 data-aos="fade-down">Welcome to Floresco<span>.</span></h2>
-            <p data-aos="fade-up">Your school, changing the world, one action at a time</p>
-            <a data-aos="fade-up" data-aos-delay="200" href="about.html" class="btn-get-started">Get Started</a>
+            <div id="login">
+                <div class="container">
+                    <div id="login-row" class="row justify-content-center align-items-center">
+                        <div id="login-column" class="col-md-6">
+                            <div id="login-box" class="col-md-12">
+                                <form id="login-form" class="form" action="" method="post">
+                                    <h3 class="text-center dark-green">Login</h3>
+                                    <div class="form-group">
+                                        <label class="dark-green">School Name:</label><br>
+                                        <input type="text" id="username" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="dark-green">Password:</label><br>
+                                        <input type="text" id="password" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <a href="achievement.html"><input class="dark-green btn btn-light btn-md" value="Submit"></a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
     <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-
       <div class="carousel-item active" style="background-image: url(assets/img/hero-carousel/hero-carousel-1.png)"></div>
-     <!--<div class="carousel-item" style="background-image: url(assets/img/hero-carousel/hero-carousel-2.jpg)"></div>
-      <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/hero-carousel-3.jpg)"></div>
-      <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/hero-carousel-4.jpg)"></div>
-      <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/hero-carousel-5.jpg)"></div>-->
-
-      <!--<a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
-      </a>
-
-      <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
-        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
-      </a>-->
-
     </div>
 
   </section><!-- End Hero Section -->

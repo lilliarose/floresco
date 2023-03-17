@@ -713,6 +713,12 @@ div.info-box {
   transform-origin: top center;
 }
 
+div.info-box:hover {
+  display: block;
+  border: 1px solid #059652;
+  padding-left: 10px;
+}
+
 li:hover + div.info-box{
   display: block;
   border: 1px solid #059652;
@@ -753,7 +759,7 @@ li:hover + div.info-box{
 }
 
 .pricing ul li {
-  margin-bottom: 1rem;
+  padding-bottom: 1rem;
 }
 
 .pricing .text-muted {
@@ -1128,6 +1134,31 @@ border-color: #059652;
 
 .features .tab-pane p:last-child {
   margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+ Login Page
+--------------------------------------------------------------*/
+#login .container #login-row #login-column #login-box {
+  margin-top: 120px;
+  max-width: 600px;
+  height: 320px;
+  border: 1px solid #2a4d2c;
+  background-color: #eaeaea;
+}
+#login .container #login-row #login-column #login-box #login-form {
+  padding: 20px;
+}
+#login .container #login-row #login-column #login-box #login-form #register-link {
+  margin-top: -85px;
+}
+
+#login .form-group {
+  margin-top: 10px;
+}
+
+.dark-green {
+  color: var(--color-primary);
 }
 
 /*--------------------------------------------------------------
