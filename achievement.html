@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Floresco - Log Achievement</title>
+  <title>Floresco - Your School</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -37,7 +37,7 @@
   ======================================================== -->
 </head>
 
-<body>
+<body onload="achievementLoad()">
 
   <!-- ======= Header ======= -->
   <header id="header" class="header d-flex align-items-center">
@@ -46,7 +46,7 @@
       <a href="index.html" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1>Florseco<span>.</span></h1>
+        <h1>Floresco<span>.</span></h1>
       </a>
 
       <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
@@ -74,11 +74,7 @@
       <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
 
         <!--Replace with school name when we get it-->
-        <h2>Calthorpe Park School</h2>
-        <ol>
-          <li><a href="index.html">Home</a></li>
-          <li>Your School</li>
-        </ol>
+        <h2 id="schoolName">Calthorpe Park School</h2>
       </div>
     </div><!-- End Breadcrumbs -->
 
@@ -88,7 +84,7 @@
         <div class="section-header">
           <h2>Log Achievement</h2>
           <p>Log your achievments here! We understand that completing all of these achievements is a huge target to aim for (although we hope we will reach it one day!), so you can gain Floresco awards for reaching certain benchmarks. Mark your achievements off here, and see how close you are to each Floresco award!</p>
-          <p>Almost all ideas on here are taken from the <a href="https://assets.publishing.service.gov.uk/media/5f847c598fa8f504594d4b82/Top_tips_to_reduce_energy_and_water_use_in_schools.pdf">governement website</a></p>
+          <p>Most of the ideas on here are our own, but some ideas on here are taken from the <a href="https://assets.publishing.service.gov.uk/media/5f847c598fa8f504594d4b82/Top_tips_to_reduce_energy_and_water_use_in_schools.pdf">governement website, regarding how to make energy use more efficient.</a></p>
         </div>
 
         <!-- TRAVEL - SAVE - EDUCATE -->
@@ -138,7 +134,7 @@
                             </p>
                         </div>
                       </ul>
-                      <!--Progress circle
+                      <!--Progress circle - hard to code!!
                       <div class="container d-flex" style="justify-content: center;">
                         <div class="row">
                             <div class="col-md-3 col-sm-6">
@@ -154,7 +150,7 @@
                             </div>
                         </div>
                       </div>-->
-                      <!--Progress bar: hidden but much easier to code - need to remove all progress circle css if wanted to use-->
+                      <!--Progress bar: not hidden and much easier to code - need to remove all progress circle css if wanted to use-->
                       <div class="progress">
                         <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
                       </div>
@@ -170,39 +166,43 @@
                       <hr>
                       <ul class="fa-ul">
                         <li><span class="fa-li"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></span>Talk to climate leaders about sustainable lighting</li>
-                        <li><span class="fa-li"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></span>Install solar panels</li>
+                        <li><span class="fa-li"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked></span>Install solar panels</li>
                         <div class="info-box">
                         Why not make a science lesson out of it too? Check out our <a href="resources.html">resources</a> to find a lesson plan for this task.
                         </div>
                         <li><span class="fa-li"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></span>Install motion sensors so that lights turn off when the room is not in use.</li>
                       </ul>
                       <div class="progress">
-                        <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <!-- Pro Tier -->
+                <!-- Travel Tier -->
                 <div class="col-lg-4">
-                  <div class="card">
+                  <div class="card mb-5 mb-lg-0">
                     <div class="card-body">
                       <h6 class="card-price text-center">Travel</h6>
                       <h5 class="card-title text-muted text-uppercase text-center">Ensure all travel is moving towards green energy.</h5>
                       <hr>
                       <ul class="fa-ul">
-                        <li><span class="fa-li"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></span><strong>Unlimited Users</strong>
-                        </li>
-                        <li><span class="fa-li"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></span>150GB Storage</li>
-                        <li><span class="fa-li"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></span>Unlimited Public Projects</li>
-                        <li><span class="fa-li"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></span>Community Access</li>
-                        <li><span class="fa-li"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></span>Unlimited Private Projects</li>
-                        <li><span class="fa-li"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></span>Dedicated Phone Support</li>
-                        <li><span class="fa-li"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></span><strong>Unlimited</strong> Free
-                          Subdomains</li>
-                        <li><span class="fa-li"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></span>Monthly Status Reports</li>
+                        <li><span class="fa-li"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></span>Encourage cycling by asking for closed roads</li>
+                        <div class="info-box">
+                          <p>
+                            Your school can appeal to the local council to close roads around the school to cars during school opening and closing times. This means it will be safer for walkers and cyclers, which is often a concern for parents when deciding about how to get their child to school. We want to move away from burning fossil fuels in inefficient ways and cars are an example of this. 
+                          </p>
+                      </div>
+                        <li><span class="fa-li"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked></span>Build Cycle Paths</li>
+                        <div class="info-box">
+                          <p>If you can't appeal for closed roads, another option is to build cycle paths. Why not run some fundraising events in school to raise money?</p>
+                        </div>
+                        <li><span class="fa-li"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></span>Start a walking to school initiative</li>
+                        <div class="info-box">
+                          <p>Your school could run a competition (perhaps between houses or year groups) to see which group walks to school the most! Why not reward the winning year group or house with a home-clothes day?</p>
+                        </div>
                       </ul>
                       <div class="progress">
-                        <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
                       </div>
                     </div>
                   </div>
@@ -234,6 +234,7 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/login.js"></script>
 
 </body>
 
